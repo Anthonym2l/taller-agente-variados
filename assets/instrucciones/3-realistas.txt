@@ -1,0 +1,27 @@
+SCENE BLOCKS — the planned one goes right after the INPUTS line.
+
+SCENE A: REAL LIFESTYLE PHOTO — the product in its most typical place of use, with the user at the moment of use; medium shot.
+
+SCENE B: REAL LIFESTYLE PHOTO — a different place, time of day, and person than before; a wider shot in its environment.
+
+REALISTIC CORE — always LAST, complete and word for word, from SAME PRODUCT to STYLE:
+SAME PRODUCT: the same physical object as in IMAGE 1 — same shape, parts, colors, and prints; its angle close to the photo (the scene's camera matches it); never mirrored or restyled. Exactly the ITEMS IN THIS PHOTO and nothing more. The photo's people, props, and graphics are left behind.
+A REAL OBJECT IN A REAL PLACE (CRITICAL): even if the photo is a render or a cutout, the product is photographed in this place — lit by the scene's own light, direction, and color, natural shading, the room reflected on glossy parts, contact shadows where it rests or attaches, the same lens, grain, and depth of field as the scene; soft natural edges.
+PLACE AND USE: used or mounted as in real life (a mobile on the crib rail); tools held ready to work. A light effect only if the product emits light and the scene is dim.
+PEOPLE (by real function): toys — a child in the age range; baby products — a baby with a parent or caregiver, safe and supervised; children's hygiene — a bright bathroom, the child ALWAYS fully dressed, use only implied, never toilet use, bathing, or undressing; tools — an adult with protective gear; clothing — a model matching the customer; home — an adult in a tidy home; pets — the pet with its owner. Natural expressions, correct hands, plain clothing.
+STYLE: realistic commercial lifestyle photography, full-frame camera, natural light, a clean airy setting (dim only if the note asks for night), neutral white balance, square 1:1, the product sharp and prominent (about 30–50% of the frame), softly blurred background, a clean image with only the scene.
+
+— FOR THE AGENT ONLY, never pasted into prompts —
+PROMPT ORDER: INPUTS line → shot or scene block → PRODUCT line → FEATURE lines (DETAIL only) → STUDIO or REALISTIC CORE.
+INPUTS line, first in every prompt: studio "INPUTS: IMAGE 1 = the product to reproduce. LAST IMAGE = only the white backdrop, not an object."; MAIN with a set item adds after IMAGE 1 "IMAGE 2 = only its <box/case/bag>, reproduce it too."; realistic "INPUTS: IMAGE 1 = the product to reproduce in a new real place."
+PRODUCT line: "PRODUCT: <in English>. RESTS ON: <lowest part touching the floor>. ITEMS IN THIS PHOTO (exact count per type): <only what this image's source photo shows>. ATTACHED IN THIS PHOTO: <items or none>. SIZES: <other items as ratios of the product's height, e.g. 'case 1.4×'>. REMOVE FROM THIS PHOTO: <what is there besides the product>." SIZES only when there are other items. For MEASURES add: "MEASUREMENTS: WIDTH \"<n> cm\", HEIGHT \"<n> cm\", DEPTH \"<n> cm\"" (depth only if given). Add "LAYOUT: <acomodo>" for ACCESSORIES and "OPERATOR NOTE: <note in English>" if I wrote one.
+FEATURE lines, in English: "FEATURE: <visible appearance and where it is>. ZOOM: <MACRO / MEDIUM>. FEATURE COLORS (fixed): <each piece from the outside in, with its place, from "Colores por pieza", e.g. 'tire touching the floor: purple; hub disc: white with a purple bar'>. FEATURE LOOK (fixed): <shape and pattern of each piece, e.g. 'hub: flat disc, one short bar'>." No color left out; one not clearly seen → "as in IMAGE 1". Confirm each against the photo before generating.
+PLAN DECISIONS:
+- MAIN: a PRODUCT photo, complete, front visible, three-quarter preferred, no people; a separate set item with a dedicated photo goes as IMAGE 2.
+- SECOND VIEW: another PRODUCT photo of the whole product; if none → a valid DETAIL → else skip.
+- DETAIL: only a "Detalle válido", from the photo where it is largest (if mine is not valid, the closest, and say so); none → ACCESSORIES or skip.
+- ACCESSORIES: one PARTS or PRODUCT photo with accessories or packaging separate from the product; never for a single item.
+- SCENE A / B: a SCENE or PRODUCT photo, different photos when possible.
+- MEASURES: the MAIN photo; a three-quarter view when DEPTH is given, if there is one.
+- Full set: MAIN, SECOND VIEW, DETAIL, ACCESSORIES (or a second DETAIL), SCENE A, SCENE B.
+CHECK after each image: same object as its photo (shape, parts, prints); each color at the same spot as in the photo — rings, centers, ends of handles — never swapped between pieces, patterns unchanged; dedicated items exact, at true size; nothing invented or added; exact count; studio: on its RESTS ON part with a small shadow centered beneath it — never long, sideways, or black; background pure white like "FONDO blanco", no light shape, corners included; a real photo, not a render, cutout, copy, or upscale. Fail → redo once.
