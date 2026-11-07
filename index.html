@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Taller del agente Variados</title>
+<meta name="description" content="Taller interactivo para operadores: cómo pedir, revisar y corregir imágenes de producto con el agente Variados en Flow.">
+<meta name="theme-color" content="#3D1690">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/quicksand-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="#inicio"><i><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="#FFC93C"/></svg></i>Agente Variados</a>
+  <nav aria-label="Secciones">
+    <a href="#video">Video</a><a href="#fotos">1 · Fotos</a><a href="#peticion">2 · Petición</a><a href="#comandos">Comandos</a><a href="#plantilla">3 · Plantilla</a><a href="#revisa">4 · Revisa</a><a href="#corrige">5 · Corrige</a><a href="#descarga">6 · Descarga</a><a href="#quiz">Quiz</a><a href="#chuleta">Chuleta</a>
+  </nav>
+  <span class="progress" id="progress"></span>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="sec light hero" id="inicio">
+  <span class="ball v px" data-depth="-.25" style="width:70px;height:70px;left:6%;top:18%"></span>
+  <span class="ball y px" data-depth=".35" style="width:26px;height:26px;left:44%;top:14%"></span>
+  <span class="ball w px" data-depth=".15" style="width:44px;height:44px;left:3%;bottom:16%"></span>
+  <span class="ball v px" data-depth=".5" style="width:34px;height:34px;right:4%;bottom:10%"></span>
+  <div class="wrap">
+    <div>
+      <span class="step reveal">Taller · Operadores · Flow</span>
+      <h1 class="words" data-words>Taller del <em>agente Variados</em></h1>
+      <p class="lead reveal" style="--i:3">De tus fotos reales a imágenes de tienda listas para publicar. Aquí no solo lees: <b>pruebas cada paso con tus manos</b>.</p>
+      <div class="ctas reveal" style="--i:5">
+        <a class="btn v" href="#video">▶ Ver el video</a>
+        <a class="btn ghost" href="#fotos">Empezar el taller</a>
+      </div>
+    </div>
+    <div class="hero-art" id="heroArt" aria-hidden="true">
+      <div class="blob px" data-depth=".08"></div>
+      <div class="ph px photo" data-depth="-.18" data-mouse="18" style="left:-2%;top:6%;transform:rotate(-8deg)"><div class="pic" data-ill="bike"></div><div class="cap">Frontal</div></div>
+      <div class="ph px photo" data-depth="-.3" data-mouse="26" style="left:6%;bottom:2%;transform:rotate(6deg)"><div class="pic" data-ill="diag"></div><div class="cap">Diagonal</div></div>
+      <div class="tile px" data-depth=".22" data-mouse="-22" style="right:2%;top:16%"><div class="tileimg" data-tile="main"><span class="lbl">Principal</span></div></div>
+      <span class="floatchip chip px" data-depth=".45" data-mouse="-34" style="right:8%;top:4%">/principal</span>
+      <span class="floatchip chip px" data-depth=".6" data-mouse="30" style="left:40%;top:44%">/detalle</span>
+      <span class="floatchip chip px" data-depth=".38" data-mouse="-16" style="right:0;bottom:12%">/medidas 18*26 cm</span>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#video"><i></i>DESLIZA</a>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="sec dark" id="video">
+  <span class="bignum px" data-depth=".25">▶</span>
+  <div class="wrap">
+    <span class="step reveal">Antes de empezar</span>
+    <h2 class="words" data-words>Mira el <em>video</em> primero.</h2>
+    <div class="video-wrap">
+      <div class="phone reveal">
+        <!-- VIDEO: reemplaza assets/video/tutorial-agente-variados.mp4 por la versión nueva con el mismo nombre.
+             Si prefieres YouTube, cambia este <video> por:
+             <iframe src="https://www.youtube.com/embed/TU_ID" style="width:100%;aspect-ratio:3/4;border:0;border-radius:34px" allowfullscreen></iframe> -->
+        <video controls playsinline preload="metadata" poster="assets/video/poster.jpg">
+          <source src="assets/video/tutorial-agente-variados.mp4" type="video/mp4">
+          Tu navegador no puede reproducir el video.
+        </video>
+      </div>
+      <div>
+        <p class="lead reveal">Tres minutos para entender todo el flujo. Después, cada sección de esta página te deja <b style="color:#fff">practicarlo</b>.</p>
+        <ul class="video-list">
+          <li class="reveal" style="--i:1"><span>1</span>Prepara fotos que sirvan</li>
+          <li class="reveal" style="--i:2"><span>2</span>Escribe la petición con comandos</li>
+          <li class="reveal" style="--i:3"><span>3</span>Lee la plantilla del agente</li>
+          <li class="reveal" style="--i:4"><span>4</span>Revisa cada imagen contra tu foto</li>
+          <li class="reveal" style="--i:5"><span>5</span>Corrige con <code>/ajuste</code></li>
+          <li class="reveal" style="--i:6"><span>6</span>Descarga en 2K</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLUJO ============ -->
+<section class="sec light" id="flujo">
+  <span class="bignum px" data-depth=".2">2→6</span>
+  <span class="ball y px" data-depth="-.3" style="width:30px;height:30px;left:8%;top:22%"></span>
+  <div class="wrap">
+    <span class="step reveal">Cómo funciona</span>
+    <h2 class="words" data-words>Subes <em>2 fotos</em>, recibes <em>6 imágenes</em>.</h2>
+    <p class="lead reveal">Cada imagen nace de <b>una sola</b> de tus fotos reales. El agente no dibuja de memoria: copia forma, colores y detalles de lo que le das.</p>
+    <div class="reveal" style="--i:2;margin-top:30px">
+      <div class="flow-stage" id="flowStage">
+        <div class="ph a photo"><div class="pic" data-ill="bike"></div><div class="cap">Frontal</div></div>
+        <div class="ph b photo"><div class="pic" data-ill="diag"></div><div class="cap">Diagonal</div></div>
+        <div class="flow-ring"></div>
+        <div class="flow-tiles" id="flowTiles"></div>
+      </div>
+      <div class="flow-actions"><button class="btn v" id="flowBtn">Enviar al agente →</button></div>
+      <div class="counter" id="flowCount"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 1 FOTOS ============ -->
+<section class="sec light" id="fotos" style="background:var(--cream2)">
+  <span class="bignum px" data-depth=".2">01</span>
+  <div class="wrap">
+    <span class="step reveal">Paso 1 · Fotos</span>
+    <h2 class="words" data-words>¿Esta foto <em>sirve?</em></h2>
+    <p class="lead reveal">Fotos reales y nítidas, una por ángulo. Las de internet también sirven, <b>si están limpias</b>. Clasifica cada foto y mira por qué.</p>
+    <div class="sorter">
+      <div class="deck reveal" id="deck"></div>
+      <div class="reveal" style="--i:2">
+        <div class="sort-q" id="sortQ">Foto 1 de 6</div>
+        <div class="sort-btns">
+          <button class="btn okb" data-ans="1">✓ Sirve</button>
+          <button class="btn nob" data-ans="0">✕ No sirve</button>
+        </div>
+        <div class="feedback" id="sortFb"></div>
+        <div class="score" id="sortScore"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 2 PETICIÓN ============ -->
+<section class="sec dark" id="peticion">
+  <span class="bignum px" data-depth=".2">02</span>
+  <span class="ball w px" data-depth="-.3" style="width:28px;height:28px;right:10%;top:16%"></span>
+  <div class="wrap">
+    <span class="step reveal">Paso 2 · Petición</span>
+    <h2 class="words" data-words>Arma tu <em>petición</em>.</h2>
+    <p class="lead reveal">Nombre del producto, una línea por foto con su ángulo y luego <b style="color:#fff">un comando por línea</b>. Lo que escribes después del comando es una nota.</p>
+    <div class="builder">
+      <div class="panel reveal">
+        <div class="field"><label for="pName">Producto</label><input class="inp" id="pName" value="Bici osito de equilibrio morado" autocomplete="off"></div>
+        <div class="field"><span class="lab">Fotos adjuntas</span><div id="photoRows"></div><button class="btn sm y" id="addPhoto">+ Agregar foto</button></div>
+        <div class="field"><span class="lab">Comandos (toca para agregar)</span>
+          <div class="cmdpick" id="cmdPick"></div>
+          <div class="extra" id="exDetalle"><input class="inp" id="detNote" placeholder="¿Qué parte? ej. manillar con cara de oso"></div>
+          <div class="extra" id="exMedidas"><input class="inp" id="mW" inputmode="decimal" placeholder="Ancho cm"><input class="inp" id="mH" inputmode="decimal" placeholder="Alto cm"><input class="inp" id="mD" inputmode="decimal" placeholder="Prof. (opcional)"></div>
+        </div>
+        <div class="field"><label for="colores">Colores (opcional)</label><input class="inp" id="colores" placeholder="ej. llantas moradas, empuñaduras moradas" autocomplete="off">
+          <p class="muted" style="font-size:14px;margin-top:8px">Úsalo si la plantilla del agente leyó mal un color: esta línea reemplaza su lectura.</p></div>
+      </div>
+      <div class="output reveal" style="--i:2">
+        <div class="screen">
+          <div class="head"><i></i><i></i><i></i>&nbsp; Flow · agente Variados</div>
+          <div class="req" id="reqOut"></div>
+        </div>
+        <ul class="warns" id="warns"></ul>
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button class="btn y" id="copyReq">Copiar petición</button><button class="btn ghost sm" id="resetReq">Reiniciar</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMANDOS ============ -->
+<section class="sec light" id="comandos">
+  <span class="bignum px" data-depth=".2">/</span>
+  <div class="wrap">
+    <span class="step reveal">Referencia</span>
+    <h2 class="words" data-words>Cada comando es <em>una imagen</em>.</h2>
+    <p class="lead reveal">Toca un comando y míralo trabajar. Puedes pedir varios: salen en el orden en que los escribes.</p>
+    <div class="cmds">
+      <div class="cmdlist reveal" id="cmdList"></div>
+      <div class="card cmdview reveal" style="--i:2">
+        <div class="demo" id="demo"><button class="replay" id="replay">↻ Repetir</button><div id="demoIn"></div></div>
+        <div class="cmdinfo" id="cmdInfo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 3 PLANTILLA ============ -->
+<section class="sec light" id="plantilla" style="background:var(--cream2)">
+  <span class="bignum px" data-depth=".2">03</span>
+  <div class="wrap">
+    <span class="step reveal">Paso 3 · Plantilla</span>
+    <h2 class="words" data-words>Lee lo que el agente <em>entendió</em>.</h2>
+    <p class="lead reveal">Antes de las imágenes, el agente llena una plantilla. Revisa la línea <b>Colores por pieza</b>: si un color está mal leído, la imagen saldrá mal. <b>Toca el color equivocado.</b></p>
+    <div class="grid2">
+      <div class="reveal"><div class="shot"><span class="tag">TU FOTO · REF 1</span><div data-ill="bike"></div></div></div>
+      <div class="reveal" style="--i:2">
+        <div class="card tpl" id="tpl">
+          <div class="ln">Producto: bici de equilibrio con cara de oso · Se apoya en: 4 ruedas</div>
+          <div class="ln">Inventario: bici: 1 · No aparece en las fotos: ninguno</div>
+          <div class="ln key">Colores por pieza:<br>
+            <span class="seg" data-ok="0">aro que toca el piso: blanco</span>
+            <span class="seg" data-ok="1">centro de la rueda: blanco</span>
+            <span class="seg" data-ok="1">puntas del manillar: moradas</span>
+            <span class="seg" data-ok="1">cara: morada, hocico blanco</span>
+            <span class="seg" data-ok="1">asiento: crema</span>
+          </div>
+          <div class="ln">Ref 1: PRODUCT · lateral · producto completo: sí</div>
+          <div class="ln">Plan 1: MAIN · ref 1 + FONDO blanco</div>
+        </div>
+        <div class="fixline tip" id="fixLine"><span>✓</span><div><b>¡Bien visto!</b> El aro que toca el piso es <b>morado</b>. Vuelve a pedir agregando esta línea a tu petición:<br><code class="chip" style="margin-top:10px">Colores: aro de las ruedas morado, centro blanco</code></div></div>
+        <p class="muted" id="tplHint" style="margin-top:14px;font-weight:600">Pista: mira de afuera hacia adentro, empezando por lo que toca el piso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 4 REVISA ============ -->
+<section class="sec light" id="revisa">
+  <span class="bignum px" data-depth=".2">04</span>
+  <span class="ball v px" data-depth="-.25" style="width:40px;height:40px;left:4%;top:30%"></span>
+  <div class="wrap">
+    <span class="step reveal">Paso 4 · Revisa</span>
+    <h2 class="words" data-words>Encuentra <em>los 3 errores</em>.</h2>
+    <p class="lead reveal">Compara el resultado con tu foto, punto por punto. <b>Toca en el resultado</b> cada cosa que no coincide.</p>
+    <div class="grid2">
+      <div class="reveal">
+        <div class="compare">
+          <div class="shot"><span class="tag">TU FOTO</span><div data-ill="bike"></div></div>
+          <div class="shot click" id="spot"><span class="tag">RESULTADO</span><div data-ill="bikeBad"></div><div class="chg" data-ill="charger"></div></div>
+        </div>
+        <div class="found-count" id="foundCount">Encontrados: 0 / 3</div>
+      </div>
+      <div class="reveal" style="--i:2">
+        <ul class="checks" id="checks">
+          <li data-k="forma"><i>✓</i>Misma forma y piezas</li>
+          <li data-k="color"><i>?</i>Cada color en su lugar (puntas, aros, centros)</li>
+          <li data-k="extra"><i>?</i>Nada inventado ni agregado</li>
+          <li data-k="sombra"><i>?</i>Sombra pequeña y centrada debajo</li>
+          <li data-k="fondo"><i>✓</i>Fondo blanco parejo, sin luces</li>
+        </ul>
+        <div class="tip" style="margin-top:24px"><span>💡</span><div>Si encuentras un error, <b>no lo descargues todavía</b>: se corrige en el paso 5.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 5 CORRIGE ============ -->
+<section class="sec dark" id="corrige">
+  <span class="bignum px" data-depth=".2">05</span>
+  <div class="wrap">
+    <span class="step reveal">Paso 5 · Corrige</span>
+    <h2 class="words" data-words>Arma tu <em>/ajuste</em>.</h2>
+    <p class="lead reveal">Selecciona la imagen y escribe <code>/ajuste</code> (o <code>/ajustar</code>) con tres piezas: <b style="color:#fff">verbo + qué + dónde</b>. Un ajuste = un cambio. Máximo 2 por imagen.</p>
+    <div class="grid2">
+      <div class="reveal" style="max-width:460px;width:100%;margin:0 auto">
+        <div class="shot" id="fixShot"><span class="tag">IMAGEN SELECCIONADA</span><div data-ill="bikeBad" id="fixIll"></div><div class="chg" data-ill="charger" id="fixChg"></div><div class="erase" id="eraser"></div></div>
+        <div class="uses" style="margin-top:16px">Ajustes usados: <i></i><i></i></div>
+      </div>
+      <div class="reveal fixer" style="--i:2">
+        <div class="fx-row"><span class="lab">Verbo</span><div class="opts" data-g="v"></div></div>
+        <div class="fx-row"><span class="lab">Qué</span><div class="opts" data-g="q"></div></div>
+        <div class="fx-row"><span class="lab">Dónde</span><div class="opts" data-g="d"></div></div>
+        <div class="cmdline" id="fxLine"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn y" id="fxApply">Aplicar ajuste</button><button class="btn ghost sm" id="fxReset">Reiniciar</button></div>
+        <div class="msg" id="fxMsg">Elige una opción de cada fila.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PASO 6 DESCARGA ============ -->
+<section class="sec light" id="descarga">
+  <span class="bignum px" data-depth=".2">06</span>
+  <div class="wrap">
+    <span class="step reveal">Paso 6 · Descarga</span>
+    <h2 class="words" data-words>Descárgala <em>en 2K</em>.</h2>
+    <div class="dl">
+      <div class="dlstage reveal">
+        <div class="shot" id="dlShot"><div data-ill="bike"></div></div>
+        <button class="dots3" id="dots3" aria-label="Más opciones">⋮</button>
+        <div class="card menu" id="menu">
+          <button id="mDl">⬇ Descargar <span>›</span></button>
+          <div class="sub" id="mSub"><button data-q="1K">1K</button><button data-q="2K">2K ★</button><button data-q="4K">4K</button></div>
+        </div>
+        <div class="toast" id="toast">✓ Descargada en 2K</div>
+      </div>
+      <div class="reveal" style="--i:2">
+        <ol class="steps" id="dlSteps">
+          <li>Toca <b>⋮</b> sobre la imagen</li>
+          <li>Elige <b>Descargar</b></li>
+          <li>Escoge <b>2K</b></li>
+          <li>Pásala por la extensión <b>“Elegir fondo blanco”</b></li>
+        </ol>
+        <div class="tip" style="margin-top:24px"><span>⚠️</span><div>Si hiciste un <code>/ajuste</code>, descarga <b>siempre la última versión</b> de esa imagen.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="sec dark" id="quiz">
+  <span class="bignum px" data-depth=".2">?</span>
+  <div class="wrap">
+    <span class="step reveal">Comprueba</span>
+    <h2 class="words" data-words>¿Ya lo <em>dominas?</em></h2>
+    <div class="quiz reveal"><div class="card qcard" id="quizBox"></div></div>
+  </div>
+</section>
+
+<!-- ============ CHULETA ============ -->
+<section class="sec light" id="chuleta">
+  <div class="wrap">
+    <span class="step reveal">Chuleta</span>
+    <h2 class="words" data-words>Todos los <em>comandos</em>.</h2>
+    <p class="lead reveal">Un comando por línea. Si olvidas alguno, escribe <code>/ayuda</code>. <button class="btn sm v noprint" style="margin-left:8px" onclick="window.print()">🖨 Imprimir</button></p>
+    <div class="card sheet reveal" style="--i:2"><table id="sheet"></table></div>
+  </div>
+</section>
+</main>
+
+<footer>Taller del agente Variados · Guía para operadores · Flow</footer>
+<script src="app.js"></script>
+</body>
+</html>
