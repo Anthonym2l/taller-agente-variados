@@ -15,7 +15,7 @@
 <header class="bar">
   <a class="brand" href="#inicio"><i><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="#FFC93C"/></svg></i>Agente Variados</a>
   <nav aria-label="Secciones">
-    <a href="#video">Video</a><a href="#fotos">1 · Fotos</a><a href="#peticion">2 · Petición</a><a href="#comandos">Comandos</a><a href="#plantilla">3 · Plantilla</a><a href="#revisa">4 · Revisa</a><a href="#corrige">5 · Corrige</a><a href="#descarga">6 · Descarga</a><a href="#quiz">Quiz</a><a href="#chuleta">Chuleta</a>
+    <a href="#video">Video</a><a href="#fotos">1 · Fotos</a><a href="#peticion">2 · Petición</a><a href="#comandos">Comandos</a><a href="#plantilla">3 · Plantilla</a><a href="#revisa">4 · Revisa</a><a href="#corrige">5 · Corrige</a><a href="#descarga">6 · Descarga</a><a href="#quiz">Quiz</a><a href="#chuleta">Chuleta</a><a href="#instalar">Instalar</a>
   </nav>
   <span class="progress" id="progress"></span>
 </header>
@@ -305,9 +305,56 @@
     <div class="card sheet reveal" style="--i:2"><table id="sheet"></table></div>
   </div>
 </section>
+
+<!-- ============ INSTALAR EL AGENTE ============ -->
+<section class="sec dark" id="instalar">
+  <span class="bignum px" data-depth=".2">⚙</span>
+  <span class="ball y px" data-depth="-.3" style="width:30px;height:30px;left:6%;top:14%"></span>
+  <div class="wrap">
+    <span class="step reveal">Instalar el agente</span>
+    <h2 class="words" data-words>Las <em>instrucciones</em>, listas para pegar.</h2>
+    <p class="lead reveal">Versión actual del agente Variados. Copia cada instrucción en su lugar de Flow, descarga el fondo de la instrucción 2 y marca tu avance. <b style="color:#fff">Deben quedar las 3 activas.</b></p>
+    <div class="inst">
+      <aside class="inst-side reveal">
+        <div class="ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" class="trk"/><circle cx="60" cy="60" r="50" class="val" id="ringVal"/></svg><div><b id="ringTxt">0/5</b><span>listos</span></div></div>
+        <ol class="isteps" id="isteps">
+          <li data-s="i1"><button type="button" class="ck" aria-label="Marcar"></button><div><b>Instrucción 1</b><span>Variados · flujo del agente</span></div></li>
+          <li data-s="i2"><button type="button" class="ck" aria-label="Marcar"></button><div><b>Instrucción 2</b><span>Variados · estudio</span></div></li>
+          <li data-s="bg"><button type="button" class="ck" aria-label="Marcar"></button><div><b>Fondo de la instrucción 2</b><span>Súbelo y nómbralo “FONDO blanco”</span></div></li>
+          <li data-s="i3"><button type="button" class="ck" aria-label="Marcar"></button><div><b>Instrucción 3</b><span>Variados · realistas</span></div></li>
+          <li data-s="test"><button type="button" class="ck" aria-label="Marcar"></button><div><b>Prueba</b><span>Escribe <code>/ayuda</code> en el agente</span></div></li>
+        </ol>
+        <div class="tip" id="instDone" style="margin-top:18px;display:none"><span>🎉</span><div><b>¡Agente listo!</b> Ya puedes usarlo con tus fotos.</div></div>
+        <button class="btn y sm" id="dlAll" style="margin-top:18px">⬇ Descargar las 3 en .txt</button>
+        <details class="changes"><summary>¿Qué cambió en esta versión?</summary>
+          <ul><li>Línea <b>Colores por pieza</b> en la plantilla: el agente lee cada color en su lugar.</li><li>Nueva línea <b>Colores:</b> en tu petición para corregir un color mal leído.</li><li><b>/ajustar</b> funciona igual que /ajuste.</li><li><b>/rehacer</b> se eliminó: selecciona tus fotos y vuelve a pedir la toma.</li><li>Detalles con zoom más moderado y sin cambiar diseños.</li></ul>
+        </details>
+      </aside>
+      <div class="inst-main reveal" style="--i:2">
+        <div class="tabs" role="tablist" id="itabs">
+          <button role="tab" data-t="0" class="on">1 · Flujo</button><button role="tab" data-t="1">2 · Estudio</button><button role="tab" data-t="2">3 · Realistas</button>
+        </div>
+        <div class="card ipanel">
+          <div class="ihead">
+            <div><span class="muted" style="font-size:13px;font-weight:700;letter-spacing:.12em">NOMBRE DE LA INSTRUCCIÓN</span>
+              <div class="iname"><span id="iName"></span><button class="mini" id="copyName" type="button">Copiar nombre</button></div></div>
+            <div class="imeta"><span id="iChars"></span><button class="btn v sm" id="copyInst" type="button">Copiar instrucción</button></div>
+          </div>
+          <div class="bgcard" id="bgCard">
+            <div class="swatch"><span>FONDO blanco</span></div>
+            <div><b>Imagen de la instrucción 2</b><p class="muted">Cuadrado blanco puro de 2048 px. Súbela en la instrucción 2 y cámbiale el nombre a <b>FONDO blanco</b>, exactamente así.</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px"><a class="btn y sm" id="dlBg" href="assets/fondo-blanco.png" download="FONDO blanco.png">⬇ Descargar FONDO blanco</a><button class="mini" type="button" id="copyBgName">Copiar “FONDO blanco”</button></div></div>
+          </div>
+          <div class="itext"><pre id="iText">Cargando…</pre><button class="expand" id="iExpand" type="button">Ver completa ▾</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>Taller del agente Variados · Guía para operadores · Flow</footer>
 <script src="app.js"></script>
+<script src="install.js"></script>
 </body>
 </html>

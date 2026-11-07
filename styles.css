@@ -379,3 +379,51 @@ footer{padding:50px 22px;text-align:center;color:var(--sub);font-weight:600;font
 .grid2>*,.builder>*,.cmds>*,.dl>*,.sorter>*,.video-wrap>*,.hero .wrap>*{min-width:0}
 .tpl{overflow-wrap:anywhere}
 @media (max-width:620px){.sheet table{table-layout:fixed}.sheet td:first-child{width:46%}.sheet .chip{white-space:normal;word-break:break-word}.tpl{font-size:13px;padding:18px}}
+/* ---------- instalar el agente ---------- */
+.inst{display:grid;grid-template-columns:320px 1fr;gap:34px;margin-top:44px;align-items:start}
+.inst>*{min-width:0}
+.inst-side{position:sticky;top:90px}
+.ring{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.ring svg{width:86px;height:86px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12}
+.ring .trk{stroke:rgba(255,255,255,.12)}
+.ring .val{stroke:var(--yellow);stroke-linecap:round;stroke-dasharray:314;stroke-dashoffset:314;transition:stroke-dashoffset .7s var(--ease)}
+.ring b{font-size:30px;display:block;line-height:1}.ring span{color:#CDBFF0;font-weight:600}
+.isteps{list-style:none;display:grid;gap:10px}
+.isteps li{display:flex;gap:14px;align-items:center;padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.06);transition:background .3s}
+.isteps li b{display:block;font-size:16px}.isteps li span{font-size:13.5px;color:#CDBFF0}
+.isteps li.done{background:rgba(47,184,114,.18)}
+.ck{flex:none;width:32px;height:32px;border-radius:10px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);display:grid;place-items:center;transition:all .3s var(--back)}
+.isteps li.done .ck{background:var(--green);box-shadow:none;transform:scale(1.08)}
+.isteps li.done .ck::after{content:"✓";color:#fff;font-weight:700}
+.changes{margin-top:18px;background:rgba(255,255,255,.06);border-radius:16px;padding:12px 16px}
+.changes summary{cursor:pointer;font-weight:700}
+.changes ul{margin:10px 0 0 18px;display:grid;gap:6px;color:#E3DAF7;font-size:14.5px}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{padding:11px 18px;border-radius:999px;background:rgba(255,255,255,.1);font-weight:700;transition:all .25s var(--back)}
+.tabs button.on{background:#fff;color:var(--ink);transform:translateY(-2px)}
+.ipanel{padding:24px}
+.ihead{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-bottom:18px}
+.iname{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.iname span{font-weight:700;font-size:22px}
+.imeta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.imeta #iChars{font-weight:700;color:var(--sub);font-size:14px}
+.mini{font-weight:700;font-size:13px;padding:7px 12px;border-radius:10px;background:#F1EAFF;color:var(--violet);transition:transform .2s var(--back)}
+.mini:hover{transform:scale(1.05)}
+.bgcard{display:none;grid-template-columns:120px 1fr;gap:18px;align-items:center;padding:16px;border-radius:18px;background:#F7F3FC;margin-bottom:18px}
+.bgcard.show{display:grid;animation:rise .5s var(--ease)}
+.swatch{aspect-ratio:1;border-radius:14px;background:#fff;box-shadow:0 8px 20px rgba(30,10,60,.12),inset 0 0 0 1px #EEE;display:grid;place-items:end center;padding:8px}
+.swatch span{font-size:11px;font-weight:700;color:#A79BB5}
+.itext{position:relative}
+.itext pre{font-family:"DM",monospace;font-size:13.5px;line-height:1.65;white-space:pre-wrap;word-break:break-word;background:#FBF9FE;border-radius:16px;padding:18px;max-height:360px;overflow:hidden;transition:max-height .6s var(--ease)}
+.itext.open pre{max-height:4000px}
+.itext::after{content:"";position:absolute;left:0;right:0;bottom:0;height:110px;border-radius:0 0 16px 16px;background:linear-gradient(transparent,#FBF9FE 75%);pointer-events:none;transition:opacity .3s}
+.itext.open::after{opacity:0}
+.expand{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:2;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px;background:var(--ink);color:#fff}
+.itext.open .expand{position:static;transform:none;display:block;margin:12px auto 0}
+.copied{animation:pulse .5s}
+@keyframes pulse{50%{transform:scale(1.08)}}
+@media (max-width:980px){.inst{grid-template-columns:1fr}.inst-side{position:static}}
+@media (max-width:620px){.bgcard{grid-template-columns:80px 1fr}.ipanel{padding:16px}.itext pre{font-size:12.5px;padding:14px}}
+@media print{#instalar{display:none!important}}
+.dark .card .muted,.dark .card .lead{color:var(--sub)}
