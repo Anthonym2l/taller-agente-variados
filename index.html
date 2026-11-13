@@ -15,7 +15,7 @@
 <header class="bar">
   <a class="brand" href="#inicio"><i><svg width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" fill="#FFC93C"/></svg></i>Agente Variados</a>
   <nav aria-label="Secciones">
-    <a href="#video">Video</a><a href="#fotos">1 · Fotos</a><a href="#peticion">2 · Petición</a><a href="#comandos">Comandos</a><a href="#plantilla">3 · Plantilla</a><a href="#revisa">4 · Revisa</a><a href="#corrige">5 · Corrige</a><a href="#descarga">6 · Descarga</a><a href="#quiz">Quiz</a><a href="#chuleta">Chuleta</a><a href="#instalar">Instalar</a>
+    <a href="#video">Video</a><a href="#fotos">1 · Fotos</a><a href="#peticion">2 · Petición</a><a href="#comandos">Comandos</a><a href="#plantilla">3 · Plantilla</a><a href="#revisa">4 · Revisa</a><a href="#corrige">5 · Corrige</a><a href="#descarga">6 · Descarga</a><a href="#quiz">Quiz</a><a href="#publicar">Publicar</a><a href="#chuleta">Chuleta</a><a href="#instalar">Instalar</a>
   </nav>
   <span class="progress" id="progress"></span>
 </header>
@@ -296,6 +296,256 @@
   </div>
 </section>
 
+<!-- ===================================================================== -->
+<!-- ===================== GUÍA DE PUBLICACIÓN ============================ -->
+<!-- ===================================================================== -->
+<section class="sec dark" id="publicar">
+  <span class="bignum px" data-depth=".25">PUB</span>
+  <span class="ball y px" data-depth="-.3" style="width:34px;height:34px;left:7%;top:20%"></span>
+  <span class="ball w px" data-depth=".4" style="width:22px;height:22px;right:12%;top:30%"></span>
+  <div class="wrap">
+    <span class="step reveal">Guía de publicación</span>
+    <h2 class="words" data-words>Del catálogo a <em>la tienda</em>.</h2>
+    <p class="lead reveal">Con las imágenes listas, toca publicar. Estos 5 pasos evitan los errores que más cuestan: productos agotados que siguen en venta, SKU que se cruzan con otro producto e imágenes en desorden.</p>
+    <div class="road">
+      <a class="road-card reveal" style="--i:1" href="#pub0"><b>0</b><span>Revisión semanal</span><small>Lo publicado sigue en el catálogo y a buen precio</small></a>
+      <a class="road-card reveal" style="--i:2" href="#pub1"><b>1</b><span>SKU</span><small>El código correcto para cada caso</small></a>
+      <a class="road-card reveal" style="--i:3" href="#pub2"><b>2</b><span>Excel</span><small>Columnas, formatos y revisar a la IA</small></a>
+      <a class="road-card reveal" style="--i:4" href="#pub3"><b>3</b><span>Imágenes</span><small>Un color por foto, todos juntos después</small></a>
+      <a class="road-card reveal" style="--i:5" href="#pub4"><b>4</b><span>Descripción</span><small>Avisar que el color es aleatorio</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUB 0 · REVISIÓN SEMANAL ============ -->
+<section class="sec light" id="pub0">
+  <span class="bignum px" data-depth=".2">P0</span>
+  <span class="ball v px" data-depth="-.25" style="width:38px;height:38px;right:6%;top:18%"></span>
+  <div class="wrap">
+    <span class="step reveal">Publicar · Paso 0 · Importante</span>
+    <h2 class="words" data-words>Revisa lo que ya está <em>publicado</em>.</h2>
+    <p class="lead reveal">Una vez por semana, como mínimo, compara tus publicaciones con el catálogo del proveedor. Los productos se agotan y los precios cambian sin aviso: si no revisas, vendes algo que ya no existe.</p>
+    <div class="rules3">
+      <div class="card rule reveal" style="--i:1"><i>⏻</i><b>Ya no está o está agotado</b><span>Apágalo y desactívalo en la plataforma.</span></div>
+      <div class="card rule reveal" style="--i:2"><i>⇅</i><b>El precio cambió</b><span>Decide si lo cambias o lo mantienes, comparando con la competencia y con productos similares.</span></div>
+      <div class="card rule reveal" style="--i:3"><i>?</i><b>¿Dudas con el precio?</b><span>Consulta a <b>Anthony</b> o a <b>César</b> antes de cambiarlo.</span></div>
+    </div>
+    <div class="grid2 wk">
+      <div class="card reveal wk-table">
+        <div class="wk-head"><b>Simulador · revisión de esta semana</b><span id="wkScore">0 / 4</span></div>
+        <div id="wkRows"></div>
+      </div>
+      <div class="reveal" style="--i:2">
+        <div class="card wk-track">
+          <div class="ring sm"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" class="trk"/><circle cx="60" cy="60" r="50" class="val" id="wkRing"/></svg><div><b id="wkDays">—</b><span id="wkLbl">sin revisión registrada</span></div></div>
+          <p class="muted" style="font-weight:600;margin:14px 0">Registra el día en que revisaste tu catálogo. El anillo se vacía con los días y se pone rojo al pasar una semana.</p>
+          <button class="btn v" id="wkMark">✓ Revisé mi catálogo hoy</button>
+        </div>
+        <div class="tip" style="margin-top:18px"><span>📅</span><div>Elige un día fijo, por ejemplo <b>cada lunes</b>, para revisar todo tu catálogo publicado.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUB 1 · SKU ============ -->
+<section class="sec light" id="pub1" style="background:var(--cream2)">
+  <span class="bignum px" data-depth=".2">P1</span>
+  <div class="wrap">
+    <span class="step reveal">Publicar · Paso 1 · SKU</span>
+    <h2 class="words" data-words>Arma el <em>SKU</em> correcto.</h2>
+    <p class="lead reveal">El SKU es el código de cada publicación. <b>Se enlaza automáticamente con el producto</b>: si está mal, el stock y las ventas de dos productos distintos se mezclan.</p>
+
+    <!-- iniciales -->
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">1</span>Elige tus iniciales</h3>
+      <p class="muted">Van al final de todos tus SKU. Tu elección queda guardada en este navegador.</p>
+      <div class="inis" id="inis"></div>
+    </div>
+
+    <!-- género -->
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">2</span>Separa los colores por género</h3>
+      <p class="muted">Los productos de catálogo con variantes de color se publican agrupados: <b>un SKU para niña y otro para niño</b>. Si un género no tiene colores disponibles, se publica solo el que hay. Toca cada color para asignarlo.</p>
+      <div class="gender">
+        <div class="gpool" id="gPool"></div>
+        <div class="gbins"><div class="gbin" data-g="NIÑA"><b>SKU niña</b><div class="gl"></div></div><div class="gbin" data-g="NIÑO"><b>SKU niño</b><div class="gl"></div></div></div>
+        <div class="gres" id="gRes"></div>
+      </div>
+    </div>
+
+    <!-- casos -->
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">3</span>Usa el formato de tu caso</h3>
+      <p class="muted">Toca en el catálogo las partes que forman el SKU. Todo va en mayúsculas, sin espacios, separado por guiones.</p>
+      <div class="tabs light-tabs" id="caseTabs">
+        <button data-c="0" class="on">Con código</button><button data-c="1">Sin código</button><button data-c="2">Código repetido</button><button data-c="3">Stock de almacén</button>
+      </div>
+      <div class="card case" id="caseBox"></div>
+    </div>
+
+    <!-- enlace -->
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">4</span>Confirma que el SKU es de ese producto</h3>
+      <div class="card link">
+        <div class="lk-row">
+          <div class="lk-sku"><code class="chip" id="lkSku">BRILLANTE-RF-J-151-3P-ISI</code></div>
+          <svg class="lk-line" viewBox="0 0 200 40" preserveAspectRatio="none"><path id="lkPath" d="M0 20 C 70 20, 130 20, 200 20" /></svg>
+          <div class="lk-prod" id="lkProd"><img src="assets/guia/brillante.webp" alt="" loading="lazy"><span>Juego de carros de construcción</span></div>
+        </div>
+        <div class="lk-ctrl"><button class="btn sm v" data-lk="ok">SKU correcto</button><button class="btn sm ghost" data-lk="bad">SKU de otro producto</button></div>
+        <p class="lk-msg" id="lkMsg">El SKU queda enlazado a este producto: stock y ventas van juntos.</p>
+      </div>
+    </div>
+
+    <!-- precio almacén -->
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">5</span>Precio de productos de almacén</h3>
+      <p class="muted">Usa el <b>costo de Upseller</b>, súmale el aumento del cuadro de ganancia y después aplica las medidas de Falabella que correspondan.</p>
+      <div class="grid2 price">
+        <div class="card pcalc">
+          <label class="lab2" for="cost">Costo en Upseller (S/)</label>
+          <input class="inp big" id="cost" type="number" inputmode="decimal" min="0" step="0.1" value="18.50">
+          <div class="pout"><span>Aumento</span><b id="pAdd">+ S/ 15</b></div>
+          <div class="pout tot"><span>Precio base</span><b id="pBase">S/ 33.50</b></div>
+          <p class="muted" style="font-size:14px;margin-top:10px">Luego aplica las medidas de Falabella. Si el costo cae justo en un límite, consulta antes de publicar.</p>
+        </div>
+        <div class="card ptable"><table id="pTable"><thead><tr><th>Costo en Upseller</th><th>Aumento</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+
+    <!-- mercado libre -->
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">6</span>En Mercado Libre, simula el costo</h3>
+      <div class="grid2">
+        <div class="ml">
+          <img src="assets/guia/ml-simular.webp" alt="Lista de publicaciones de Mercado Libre con el menú de opciones abierto" loading="lazy">
+          <span class="hl" style="left:92%;top:9%;width:4%;height:7%"></span>
+          <span class="hl" style="left:77%;top:76%;width:20%;height:5%"></span>
+          <span class="cur" id="mlCur"></span>
+        </div>
+        <ol class="steps" id="mlSteps">
+          <li>Sube el producto a Mercado Libre</li>
+          <li>En <b>Publicaciones</b>, toca <b>⋮</b> en ese producto</li>
+          <li>Elige <b>Simular costos</b></li>
+          <li>Revisa cuánto recibes y ajusta el precio si hace falta</li>
+        </ol>
+      </div>
+      <div style="margin-top:14px"><button class="btn sm v" id="mlPlay">▶ Ver cómo</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUB 2 · EXCEL ============ -->
+<section class="sec dark" id="pub2">
+  <span class="bignum px" data-depth=".2">P2</span>
+  <div class="wrap">
+    <span class="step reveal">Publicar · Paso 2 · Excel</span>
+    <h2 class="words" data-words>Llena el <em>Excel</em>.</h2>
+    <p class="lead reveal">Cada fila es un producto. Las columnas obligatorias no pueden quedar vacías y cada una tiene su formato. La IA te ayuda a llenarlo, <b style="color:#fff">pero siempre lo revisas tú</b>.</p>
+    <div class="cols-filter reveal" id="colFilter"><button class="on" data-f="all">Todas</button><button data-f="Obligatorio">Obligatorias</button><button data-f="Opcional">Opcionales</button><button data-f="Según plataforma">Según plataforma</button></div>
+    <div class="grid2 cols reveal">
+      <div class="colchips" id="colChips"></div>
+      <div class="card colinfo" id="colInfo"></div>
+    </div>
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">!</span>La IA llenó esta fila. Encuentra los 4 errores</h3>
+      <p class="muted">Toca cada celda que no cumple su formato.</p>
+      <div class="xrow-wrap"><div class="xrow" id="xRow"></div></div>
+      <div class="xmsg" id="xMsg">Encontrados: 0 / 4</div>
+      <button class="btn y sm" id="xFix" disabled>Corregir la fila</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUB 3 · IMÁGENES ============ -->
+<section class="sec light" id="pub3">
+  <span class="bignum px" data-depth=".2">P3</span>
+  <span class="ball y px" data-depth="-.3" style="width:30px;height:30px;left:5%;top:24%"></span>
+  <div class="wrap">
+    <span class="step reveal">Publicar · Paso 3 · Imágenes</span>
+    <h2 class="words" data-words>Ordena las <em>imágenes</em>.</h2>
+    <p class="lead reveal">En productos de catálogo con varios colores, la publicación muestra <b>un color por foto, del género del SKU</b>. La foto con todos los colores juntos nunca va primero: va en la 3, 4 o 5. Después, las generadas con IA.</p>
+
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">1</span>Mira los ejemplos</h3>
+      <div class="gal" id="gal">
+        <div class="gal-tabs" id="galTabs"></div>
+        <div class="card gal-view">
+          <div class="gal-img" id="galImg"></div>
+          <div class="gal-txt" id="galTxt"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">2</span>Ordénalas tú: SKU <span class="badge-g">NIÑA</span></h3>
+      <p class="muted">Cubiertos de silicona. Los colores de niña son <b>rosado</b> y <b>morado</b>. Toca las imágenes en el orden en que deben ir; toca un casillero para quitarla.</p>
+      <div class="order">
+        <div class="slots" id="slots"></div>
+        <div class="pool" id="pool"></div>
+        <ul class="checks orules" id="oRules"></ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn v sm" id="oCheck">Revisar orden</button><button class="btn ghost sm" id="oReset">Reiniciar</button></div>
+      </div>
+    </div>
+
+    <div class="sub reveal">
+      <h3 class="h3"><span class="n">3</span>Después de cargar, revisa el orden</h3>
+      <p class="muted">A veces Falabella no guarda el orden en que subiste las imágenes y las mezcla. Siempre abre la publicación y confírmalo.</p>
+      <div class="card shuffle">
+        <div class="sh-row" id="shRow"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="btn sm v" id="shUp">⬆ Subir a Falabella</button><button class="btn sm y" id="shFix" disabled>Revisar y reordenar</button></div>
+        <p class="sh-msg" id="shMsg">Así las subiste.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUB 4 · DESCRIPCIÓN ============ -->
+<section class="sec light" id="pub4" style="background:var(--cream2)">
+  <span class="bignum px" data-depth=".2">P4</span>
+  <div class="wrap">
+    <span class="step reveal">Publicar · Paso 4 · Descripción</span>
+    <h2 class="words" data-words>Avisa que el color <em>es aleatorio</em>.</h2>
+    <p class="lead reveal">En productos de catálogo, el cliente no elige el color: se envía según el stock. Por eso, <b>antes de la descripción que generó la IA</b>, agrega una línea que lo diga y que señale la foto donde se ven todos.</p>
+    <div class="grid2 desc">
+      <div class="reveal">
+        <div class="ex5">
+          <img src="assets/guia/foto5-colores.webp" alt="Publicación de Falabella con la quinta imagen mostrando todos los colores" loading="lazy">
+          <span class="hl t5" style="left:2.3%;top:62.4%;width:6.9%;height:12.7%"></span>
+          <span class="ex5-lbl">Foto 5 = todos los colores</span>
+        </div>
+      </div>
+      <div class="reveal" style="--i:2">
+        <div class="fx-row2"><span class="lab2">¿Qué varía?</span><div class="opts2" id="dVar"><button class="on">color</button><button>modelo</button><button>diseño</button></div></div>
+        <div class="fx-row2"><span class="lab2">Foto con todos</span><div class="opts2" id="dPos"><button>3</button><button>4</button><button class="on">5</button></div></div>
+        <div class="dline" id="dLine"></div>
+        <div class="card dbox">
+          <div class="dbox-h">Descripción del producto</div>
+          <div class="dtxt" id="dTxt"><p class="ai">Pack de 2 cubiertos de silicona suave, ideales para que tu bebé aprenda a comer solo. Mango ergonómico, libre de BPA y fácil de lavar.</p></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px"><button class="btn v sm" id="dIns">⤒ Insertar al inicio</button><button class="btn y sm" id="dCopy">Copiar descripción</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PUB · CHECKLIST ============ -->
+<section class="sec dark" id="pubcheck">
+  <span class="bignum px" data-depth=".2">✓</span>
+  <div class="wrap">
+    <span class="step reveal">Antes de publicar</span>
+    <h2 class="words" data-words>Tu <em>checklist</em> por producto.</h2>
+    <div class="grid2" style="align-items:start">
+      <ul class="pchk reveal" id="pChk"></ul>
+      <div class="reveal" style="--i:2">
+        <div class="ring big"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" class="trk"/><circle cx="60" cy="60" r="50" class="val" id="pRing"/></svg><div><b id="pTxt">0/9</b><span>listos</span></div></div>
+        <div class="tip" id="pDone" style="display:none;margin-top:16px"><span>🚀</span><div><b>¡Listo para publicar!</b> Reinicia la lista para el siguiente producto.</div></div>
+        <button class="btn y sm" id="pReset" style="margin-top:18px">↻ Siguiente producto</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CHULETA ============ -->
 <section class="sec light" id="chuleta">
   <div class="wrap">
@@ -356,5 +606,6 @@
 <footer>Taller del agente Variados · Guía para operadores · Flow</footer>
 <script src="app.js"></script>
 <script src="install.js"></script>
+<script src="guia.js"></script>
 </body>
 </html>

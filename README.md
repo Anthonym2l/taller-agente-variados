@@ -9,9 +9,12 @@ No tiene dependencias ni paso de compilación: son archivos HTML, CSS y JS listo
 index.html                 página principal
 styles.css                 estilos (parallax, animaciones, responsive)
 app.js                     interacciones de cada sección
+install.js                 sección "Instalar el agente"
+guia.js                    sección "Guía de publicación"
 render.yaml                configuración opcional para Render (Blueprint)
 assets/
   favicon.svg
+  guia/                    imágenes de la guía de publicación (del documento de consideraciones)
   fonts/                   tipografías locales (no depende de Google Fonts)
   fondo-blanco.png         imagen "FONDO blanco" de la instrucción 2
   instrucciones/           las 3 instrucciones del agente (.txt) que se muestran en "Instalar"
